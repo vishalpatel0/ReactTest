@@ -15,7 +15,7 @@ import About from "./Page/About.jsx";
 import Services from "./Page/Services.jsx";
 import Contact from "./Page/Contact.jsx";
 import User from "./Page/User.jsx";
-import Page1 from "./component/page1.jsx";
+import Page1 from "./component/context/page1.jsx";
 
 const routers = createBrowserRouter([
   {
