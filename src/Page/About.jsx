@@ -1,13 +1,28 @@
-import React from "react";
-import { userData } from "../context/userContext";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addUser } from "../methord/userSlice";
 
 const About = () => {
-  const { count, add } = userData();
+  const { name, setName } = useState();
+  const dispatch = useDispatch();
+
+  function adduser(e) {
+    // e.preventDefault();
+    // dispatchs(addUser(name));
+  }
+
   return (
     <div>
-      About {count}
+      Start Redux toolkit
       <br />
-      <button onClick={() => add()}>click </button>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => {
+          setName(e.target.value);
+        }}
+      ></input>
+      <button onClick={adduser}>add </button>
     </div>
   );
 };
